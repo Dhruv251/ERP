@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/homepage.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+
+.heading{
+    font-size: 50px;
+    padding-top: 6rem;
+    margin-top: -90px;
+    margin-bottom: -120px;
+    position:relative ;
+}
+.des{
+    background-color: #e3f2fd;
+    padding: 7px;
+}
+
+section{
+    margin-top: 65px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+}
+.buttonfor{
+    position: relative;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    /* margin-top: 40px;
+    margin-left: 25%;
+    min-height: 100vh; */
+    background :#d5d0d6;
+}
+.box{
+    position: absolute;
+    width: 250px; 
+    height: 250px;
+    
+}
+.dropdown{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #7f0099 ;
+    color: #fff;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px ;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.dropdown .item{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    margin-top: 63px;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.dropdown.activ .item{
+    visibility: visible;
+}
+
+.dropdown .item a{
+    left:100%;
+    position: relative;
+    display: flex;
+    font-size: 35px;
+    background: #fff;
+    color: #7f0099;
+    text-decoration: none;
+    border-radius: 5px;
+    padding:10px 15px;
+    margin-top:5px;
+    transition: .5s;
+    transition-delay: calc(60ms * var(--i)) ;
+}
+.dropdown.activ .item a{
+    left:0;
+}
+.barea{
+    margin-top:150px ;
+   margin-left: 10%;
+   padding: 40px;
+}
+
+.uppos{
+    margin-left: 24%;
+}
+
+.isspos{
+    margin-left: 52%;
+}
+.serpos{
+    margin-left: 38%;
+}
+.searchform{
+    visibility: hidden;
+}
+.temp{
+    margin: auto;
+    align-items: center;
+}
+.te{
+    color: #7f0099;
+}
+.coll{
+    background-color: #fc743f;
+}
+.coll1{
+    background-color: #453ffc;
+}.coll2{
+    background-color: #3ffc55;
+}
+
+.dropdown .boxx{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    margin-top: 63px;
+    overflow: hidden;
+    visibility: hidden;
+}
+.formm{
+    
+    position: absolute;
+    width: 250px; 
+    height: 250px;
+}
+.crpos{
+    margin-left: 10%;
+}
+.design{
+    visibility: hidden;
+}
+.back{
+    padding-top: 150px;
+    margin: auto;
+    position: relative;
+    width: 500px;
+    height: 250px;
+    background-color: #ffffff ;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:5px ;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+  }
+  .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(66, 54, 54);
+  text-align: center;
+}
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+
+  
+  .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+.form-control{
+  padding-top: 2rem !important;
+  padding-bottom: 0.625rem;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container-fluid des" >
+        <nav class="navbar navbar-expand-lg navbar-blue">
+           <a class="navbar-brand" href="#">
+           <img src="/images/cel_logo.png" width="50" height="50"/> Central Electronics Limited
+           </a> 
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+           </button>
+
+
+    
+         <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+                <a class="nav-link active" aria-current="page" href="/after">Home</a>
+          </li>
+            <li class="nav-item active">
+                <a class="nav-link active" aria-current="page" href="/admin">Admin</a>
+          </li>
+          <li class="nav-item active">
+                <a class="nav-link" href="/log">Log Out</a>
+          </li>
+            </ul>
+         
+        </nav>
+         
+     </div>
+    <section class="heading-section">
+        <center>
+            <h1 class="heading">Welcome To Central Electronics Limited ERP Portal!</h1>
+        </center>
+    </section>
+    
+
+    <!-- <div>
+        <div>
+            <button id="createbt">Create</button>
+            <ul id="createli">
+                <li><button>Vendor</button></li>
+                <li><button>Customer</button></li>
+                <li><button>Fixed Asset</button></li>
+                <li><button>Item</button></li>
+
+            </ul>
+        </div>
+        
+        <button>Update</button>
+        <button>Search</button>
+        <button>Issue</button>
+
+    </div> -->
+   <section class="barea">
+    <div class="box crpos">
+        <div id="cre" class="dropdown coll3">Create
+            <div class="item">
+                <a href="/vendor.html" style="--i:1;">Vendor</a>
+                <a href="/item.html" style="--i:2;">Items</a>
+                <a href="/fixedasset.html" style="--i:3;">Fixed Asset</a>
+                <a href="/customer.html" style="--i:4;">Customer</a>
+            </div>   
+        </div>
+
+    </div>
+
+    <div class="box uppos">
+        <div id="up" class="dropdown coll">Update
+            <div class="item">
+                <a href="/vendor_u.html" style="--i:1;">Vendor</a>
+                <a href="/item_u.html" style="--i:2;">Items</a>
+                <a href="/fixedasset_u.html" style="--i:3;">Fixed Asset</a>
+                <a href="/customer_u.html" style="--i:4;">Customer</a>
+            </div>   
+        </div>
+
+    </div>
+
+<!-- <div class="buttonform">
+    <div class="box">
+        <div class="dropdown">Searh
+            <div class="item">
+                <a href="#" style="--i:1;">Vendor</a>
+                <a href="#" style="--i:2;">Items</a>
+                <a href="#" style="--i:3;">Fixed Asset</a>
+                <a href="#" style="--i:4;">Customer</a>
+            </div>   
+        </div>
+    </div>
+</div> -->
+
+    <div class="box isspos">
+        <div id="iss" class="dropdown coll1">Issue
+            <div class="item">
+                <a href="/issue.html" style="--i:1;">Issues</a>
+                <a href="/income_tax.html" style="--i:2;">Income Tax</a>
+            </div>   
+        </div>
+
+    </div>
+
+    <div class="box serpos">
+        <div id="ss" class="dropdown coll2">Search
+                <div class="boxx">
+                
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="serform" class=" design back">
+    <div  class=" formm">
+        <form action="/search" method="post">
+            <div class="form-floating">     
+                <input type="text" name="reqID" class="form-control" id="floatingInput" placeholder="Employee ID">
+                <label  for="floatingInput">REQUEST ID:</label>
+              </div>
+              <button class="btn btn-primary w-100 py-2" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+<div class="footer">
+  &copy; Created By Dhruv
+</div>
+
+</section>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+   
+   
+   
+   <script>
+    
+    
+        const dropdown=document.getElementById("cre");
+        const  per=document.getElementById("serform");
+        dropdown.addEventListener("click",function(){
+            dropdown.classList.toggle('activ');
+            upd.classList.remove('activ');
+            isc.classList.remove('activ');
+            ser.classList.remove('activ');
+            per.classList.add('design');
+        });
+        const upd=document.getElementById("up");
+        upd.addEventListener("click",function(){
+            isc.classList.remove('activ');
+            dropdown.classList.remove('activ');
+            upd.classList.toggle('activ');
+            ser.classList.remove('activ');
+            per.classList.add('design');
+
+        });
+        const isc=document.getElementById("iss");
+        isc.addEventListener("click",function(){
+            upd.classList.remove('activ');
+            dropdown.classList.remove('activ');
+            isc.classList.toggle('activ');
+            ser.classList.remove('searchform');
+            per.classList.add('design');
+        });
+        const ser = document.getElementById("ss");
+        // const aaa = document.getElementById("abc");
+        ser.addEventListener("click",function(){
+            per.classList.toggle('design');
+            upd.classList.remove('activ');
+            dropdown.classList.remove('activ');
+            isc.classList.remove('activ');
+        })
+
+        
+    </script>
+</body>
+</html>
