@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="js-lib/jquery-2.2.4.min.js"></script>
+<meta charset="ISO-8859-1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+<title>FA Master Card</title>
+</head>
+<script type="text/javascript">
+function buttonDis(status){
+	status = !status;
+	document.getElementById("sub").disabled = status;
+}
+
+
+</script>
+<style type="text/css">
+#heading {
+text-align: center;
+font-size: 30px;
+margin-left: -10px;
+margin-bottom: 20px;
+}
+.box {
+  box-sizing: content-box;
+  border: 2px solid black;
+   margin: auto;
+ 
+  width: 800px;
+  padding-top: 35px;
+  padding-left: 60px;
+ 
+}
+.box1 {
+box-sizing: content-box;
+border: 2px solid black;
+margin: auto;
+margin-bottom: 20px;
+width: 800px;
+padding-top: 35px;
+  padding-left: 60px;
+
+
+}
+
+input[type="text"],input[type="number"],input[type="email"]{
+  	 
+     background: transparent;
+     border: 1px solid black;
+     font-family: Helvetica,arial,sans-serif;
+     margin-bottom: 30px;
+     margin-left: 60px;
+     padding:8px;
+     font-size: 15px;
+     width:400px;
+}
+label{
+    display: inline-block;
+    width:150px;
+    text-align: left;
+    font-size: 20px;
+}
+button {
+ justify-content: center;
+ margin-left: 40px;
+ font-size: 20px;
+ margin-bottom: 19px;
+ font-family: Helvetica,arial,sans-serif;
+ display: inline-block;
+}
+.wrapper {
+    text-align: center;
+}
+select{
+font-size: 15px;
+padding-left: 10px;
+width:418px;
+height: 40px;
+margin-left: 60px;
+margin-bottom: 30px; 
+
+}
+#req{
+text-align: center;
+font-size: 25px;
+}
+
+#heading1 {
+text-align: center; 
+font-size: 30px;
+
+}
+
+.des{
+    background-color: #e3f2fd;
+    padding: 7px;
+}
+
+
+</style>
+<body>
+  <div class="container-fluid des" >
+    <nav class="navbar navbar-expand-lg navbar-blue">
+       <a class="navbar-brand" href="/after">
+       <img src="/images/cel_logo.png" width="40" height="40"/> CEL
+       </a> 
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+       </button>
+
+
+
+     <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+            <a class="nav-link active" aria-current="page" href="/after">Home</a>
+      </li>
+        
+        </ul>
+     
+    </nav>
+     
+ </div>
+
+
+<p id="heading"> Fixed Assets Master Card</p><br>
+<form action="/add_fixed_asset" method="post" autocomplete="off">
+<div class="box1">
+<tr>
+<th><label style="margin-left: -30px; ">Division Code:</label>
+<select id="division" name="division" style="width: 250px; margin-left: -5px;" onblur = "pf()" required>
+<option value="">Choose an Option</option>
+<option value="C0100">C0100  (PROFESSIONAL FERRITES DIVISION (PFD))</option>
+<option value="C0200">C0200  (ELECTRONIC CERAMIC DIVISION (ECD))</option>
+<option value="C0208">C0208  (INT.SEC.SYSTEM)</option>
+<option value="C0300">C0300  (INSTRUMENTS & SYSTEMS DIVISION (SPD))</option>
+<option value="C0500">C0500  (SECURITY SURVEILLLANCE GROUP)</option>
+<option value="C0600">C0600  (MICROWAVE ELECTRONICS DIVISION (MED))</option>
+<option value="C0700">C0700  (SOLAR PHOTOVOLTAIC DIVISION (SPVG))</option>
+<option value="C0702">C0702  (SPV CZT(OLD))</option>
+<option value="C0800">C0800  (EESL SPECIAL PROJECT)</option>
+<option value="C0901">C0901  (CMD OFFICE)</option>
+<option value="C0902">C0902  (FINANCE & ACCOUNTS DIVISION (FAD))</option>
+<option value="C0903">C0903  (MATERIAL MANAGEMENT DIVISION (MMD))</option>
+<option value="C0904">C0904  (CORPORATE PLANNING & HUMAN RESOURCE DIVISION (CP&H))</option>
+<option value="C0905">C0905  (REG SALES OFF)</option>
+<option value="C0906">C0906  (QUALITY ASSURANCE & SERVICES DIVISION)</option>
+<option value="C0907">C0907  (ENGINEERING DIVISION)</option>
+<option value="C0908">C0908  (JHARKHAND)</option>
+<option value="C0909">C0909  (MARKETING DIVISION (COMPONENTS))</option>
+<option value="C0910">C0910  (MARKETING DIVISION (SYSTEMS))</option>
+<option value="C0911">C0911  (MARKETING DIVISION (SPVG))</option>
+<option value="C0912">C0912  (CORP.PLAN & TRAINING DIVISON (CP&HRD))</option>
+<option value="C0913">C0913  (ORISSA)</option>
+<option value="C0914">C0914  (CENTRE FOR CRYSTAL GROWTH)</option>
+<option value="C0915">C0915  (ASSAM)</option>
+<option value="C0916">C0916  (TECH. EDUCATION)</option>
+<option value="C0917">C0917  (DISPOSAL DIVISION)</option>
+<option value="C0918">C0918  (IT)</option>
+<option value="C0919">C0919  (GUJARAT CEL OFFICE)</option>
+<option value="C1000">C1000  (INDUSTRIAL ELECTRONICS DIVISION)</option>
+<option value="R&D">R&D</option>
+<option value="R0612">R0612  (MED I&M)</option>
+<option value="R1200">R1200  (R&D FACILITY FOR ALL PRODUCT)</option>
+<option value="R1300">R1300  (Installation of Solar Panel on Science Express)</option>
+<option value="R1400">R1400  (DEV. OF SOLAR CITIES PROGRAMME)</option>
+<option value="R2000">R2000  (CZT PROJECT FOR SPV  (SSPL))</option>
+<option value="R7400">R7400  (PZDAC PROJECT OF SPD (DSIR))</option>
+<option value="R7500">R7500  (SECONDARY REFERENCE CELL PROJECT(MNRE)</option>
+<option value="R7600">R7600  (SECURITY SYSTEMS PROJECT OF ECD (TDB))</option>
+<option value="R8800">R8800  (SPD (R&D))</option>
+<option value="R9900">R9900  (SPVF-UHE AREA FOR HIT SOLAR CELLS)</option>
+<option value="Other">Other</option>
+</select ></th>
+<th>
+<label style="margin-left:20px; ">Group Code:</label>
+<select name="group" id = "group"style="width: 252px; margin-left: -8px;" required>
+<option value="">Choose an Option</option>
+<option value="01">01 (SPV)</option>
+<option value="02">02 (COMP)</option>
+<option value="03">03 (SPD)</option>
+<option value="04">04 (ADMIN)</option>
+<option value="05">05 (PAYROLL)</option>
+<option value="06">06 (CENTRAL ACCOUNTS)</option>
+<option value="07">07 (SALES TAX AND EXCISE)</option>
+<option value="08">08 (OTHERS)</option>
+<option value="09">09 (PROJECTS)</option>
+<option value="10">10 (MED)</option>
+<option value="11">11 (ECD)</option>
+<option value="12">12 (R&D)</option>
+<option value="13">13 (CCG)</option>
+<option value="14">14 (SSG)</option>
+<option value="15">15 (EESL SPECIAL PROJECTS)</option>
+</select>
+</th>
+<th><label style="margin-left: -26px;" >Filled By:</label><input type="text" name="fname" id="fname" style="width: 235px; margin-left: -5px;" autocomplete="off" required></th>
+</tr>
+<tr>
+<th><label style="margin-left: 20px;">Date:</label><input type="text" id = "date" name="date" style="width:235px; font-size:20px; margin-left: -6px; height:20px;" readonly ></th>
+<th><label style="margin-left: -30px;">Intercom No.:</label><input type="text" name="intercom" style="width:236px; margin-left: -1px;" autocomplete="off" maxlength="3" pattern ="[0-9]{3}" required></th>
+<th><label style="margin-left:18px;">Employee Code:</label><input type="text" name="Empid" id="Empid" style="width:232px;margin-left: -4px;"  autocomplete="off" required><br></th>
+</tr>
+</div>
+<div class="box">
+<label id="fa_no1">Number :</label> <input type="Text"  name="fa_no" id="fa_no" value = "" readonly><br>
+<label>Business Unit:</label> <input type="text"  name="bu" required ><br>
+<label>Description 1:</label> <input type="text" name="description1" required  ><br>
+<label>Description 2:</label> <input type="text" name="description2"  ><br>
+<label>Unit:</label> <input type="text" name="unit" ><br>
+<label>HSN Code and GST%</label> <input type="text" name="gst" ><br>
+<label>Responsibility Center:</label> <!--  <input type="text" name="rc" >-->
+<select name="rc" required>
+<option value="">Choose an Option</option>
+<option value="ADMIN">ADMIN (ADMINISTRATION)</option>
+<option value="CCG">CCG</option>
+<option value="ECD">ECD (Electronic and Ceramic Division)</option>
+<option value="MED">MED (Microwave Electronics Division)</option>
+<option value="EESL">EESL (EESL SPECIAL PROJECT)</option>
+<option value="PAYROLL">PAYROLL</option>
+<option value="PFD">PFD (Professional Ferriets Division)</option>
+<option value="R&D">R&D</option>
+<option value="SPD">SPD (System and Production Division)</option>
+<option value="SPV">SPV (Solar Cell and Photo-volatic)</option>
+<option value="SSG">SSG (Security & Survillance Group)</option>
+</select>
+<br>
+<label>Replenishment System:</label>
+<input type="text" name="rs" >
+<br>
+<label>Vendor Code:</label>
+<input type="text" name="vc" >
+<br>
+<label>Purpose:</label>
+<input type="text" name="purpose" >
+<br>
+<label>Import Duty Group:</label>
+<input type="text" name="idg" >
+<br>
+<label>FA Location Code:</label>
+<select name="fa_loc" required>
+<option value="">Choose an Option</option>
+<option value="CMD">CMD</option>
+<option value="CPND">CPND</option>
+<option value="CZT">CZT</option>
+<option value="DISPOSAL">DISPOSAL</option>
+<option value="ECD">ECD</option>
+<option value="ED">ED</option>
+<option value="EESL">EESL</option>
+<option value="FIN">FIN</option>
+<option value="HRD">HRD</option>
+<option value="IT">IT</option>
+<option value="MDS">MDS</option>
+<option value="MMD">MMD</option>
+<option value="MED">MED</option>
+<option value="QASG">QASG</option>
+<option value="RD">RD</option>
+<option value="RSO">RSO</option>
+<option value="SAHIBABAD">SAHIBABAD</option>
+<option value="SPD">SPD</option>
+<option value="SPVG">SPVG</option>
+<option value="SPVM-DH">SPVM-DH</option>
+<option value="SPVM-GU">SPVM-GU</option>
+<option value="SSG">SSG</option>
+
+
+</select>
+<br>
+<label>FA Posting Group:</label>
+<select name="fa_pg" id="fa_pg" >
+<option value="">Choose an Option</option>
+</select>
+<br>
+<label>FA Class Code:</label>
+<select name="fa_code">
+<option value="">Select an Option</option>
+<option value="TANGIABLE">TANGIABLE</option>
+<option value="NON-TANGIABLE">NON-TANGIABLE</option>
+</select>
+<br>
+<label>FA Subclass:</label>
+<select name="fa_sub" id="fa_sub" >
+<option value="">Choose an Option</option>
+</select>
+<br>
+<label>Depreciation Method:</label>
+<input type="text" name="dm">
+<br>
+<label>Depreciation Percentage:</label>
+<input type="text" name="dp">
+<br>
+<ul style="list-style-type: none; font-size: 18px;">
+<li style="margin-left: -35px;padding-left: 10px;"><input type="checkbox" id = "checkbox" value="verify" onclick="buttonDis(this.checked)" style="margin-right: 10px;">I have Checked and found this Fixed Asset does not exist in current FA master and kindly create a new FA card for the same.</li>
+</ul>
+<div class="wrapper" >
+<button type="submit" id="sub" disabled>Submit</button>
+</div>
+</div>
+</form>
+</body>
+<script type="text/javascript">
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = year + "-" + month + "-" + day;       
+document.getElementById("date").value = today;
+
+
+var pg = ['A.C.', 'AIRCOOLER', 'AIREQUIPME', 'BRIDGE', 'BUILDING', 'CANTEENEQP', 'CAPWIP', 'CH&AC', 'CJOBINPROG', 'COMPHARD', 'COMPSOFT', 'DRWOFFEQUP', 'DUR TOOLS', 'ELCTMEEQUP', 'ELECTEQUIP', 'ELECTR-INT', 'EXPSUINST', 'F&F', 'FAINTRANST', 'FFEQUIPM', 'GASSYSTEM', 'HANDEQUIP', 'LANDLEASE', 'LIBRARY', 'MAINPOWER', 'MATHANDEQU', 'MESEQUIPM', 'OFFEQUIP', 'OVENFUR', 'PLANTMACH', 'ROADBRIDGE', 'SEAWAGE', 'SECWALL', 'SERVER NET', 'SHOPEQUIPM', 'SOLARPOWER', 'STREETLIGH', 'TECHKNOW', 'TELEPHONE', 'TEMPSHEDS', 'TESTEQUIPM', 'VEHICLES', 'WATERCOOL', 'WATERSUPPL'];
+var sel = document.getElementById("fa_pg");
+for(var i=0;i<pg.length;i++){
+	var option = document.createElement("option");
+	option.text = pg[i];
+	option.value = pg[i];
+	sel.add(option);
+}
+
+
+var sub = ['BUILDINGS', 'CAPITALWIP', 'COMPDP', 'ELECTINSEQ', 'FURNITURE', 'LAND', 'LAND-LEASE', 'OFF-EQUIP', 'PLANT/MACH', 'ROAD', 'TECHKNOW', 'VEHICLES'];
+
+var sel = document.getElementById("fa_sub");
+for(var i=0;i<sub.length;i++){
+	var option = document.createElement("option");
+	option.text = sub[i];
+	option.value = sub[i];
+	sel.add(option);
+}
+
+$("#fa_no1").hide();
+$("#fa_no").hide();
+</script>
+<script>
+var emp = '<%=String.valueOf(session.getAttribute("empc"))%>';
+if(emp=="null"){
+	location.replace("cel_login.jsp");
+}
+else{
+	$("#Empid").attr("value",emp);
+	$("#Empid").prop("readonly", true);
+}
+</script>
+</html>

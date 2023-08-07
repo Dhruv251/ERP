@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+
+}
+
+li a {
+float: right;
+display: block;
+color: white;
+text-align: center;
+padding: 18px 16px;
+font-family: Helvetica,arial,sans-serif;
+text-decoration: none;
+font-size: 20px;
+}
+li a:hover {
+background-color: #111;
+}
+li p {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding-left: 20px;
+font-family: Helvetica,arial,sans-serif;
+text-decoration: none;
+font-size: 25px;
+
+}
+img {
+margin: auto;
+padding-left: 7px;
+padding-top:4px;
+}
+#main{
+position: absolute;
+/*padding-top: 250px;*/
+left: 25%;
+top: 30%;
+font-size: 35px;
+font-family: Helvetica,arial,sans-serif;
+}
+button {
+font-size: 25px;
+position:absolute;
+left: 45%;
+top: 45%;
+}
+</style>
+</head>
+<body>
+<ul>
+<li><img src="images/cel_logo.png" alt="CEL logo" align="left" height="60" width="70" style="text-align: left;"></li>
+<li><p id="content">Central Electronics Limited</p></li>
+<li><a href="Home.jsp">Home</a></li>
+</ul>
+<div id="contain">
+<p id="main">
+Request Id:  <%out.print(session.getAttribute("r"));%> has been submitted successfully
+</p>
+</div>
+<form action="Home.jsp" method="get">
+<button type="submit" >Back</button>
+</form>
+</body>
+
+</html>
+<% 	con.close();
+}
+else{
+    out.println("Invalid!");
+}
+
+}	
+catch(Exception e){
+e.printStackTrace();
+
+}
+%>    
